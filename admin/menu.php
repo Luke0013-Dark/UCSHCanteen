@@ -10,7 +10,8 @@ $message = "";
 $message_type = "";
 
 // Add special_note column if not exists
-$conn->query("ALTER TABLE menu_items ADD COLUMN IF NOT EXISTS special_note VARCHAR(255) DEFAULT NULL");
+@$conn->query("ALTER TABLE menu ADD special_note VARCHAR(255) DEFAULT NULL");
+
 
 // =============================================
 // ALLOWED IMAGE TYPES: ONLY PNG AND JPEG
